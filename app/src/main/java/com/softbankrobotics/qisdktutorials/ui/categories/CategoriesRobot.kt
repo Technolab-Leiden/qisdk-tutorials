@@ -107,8 +107,12 @@ internal class CategoriesRobot(private val presenter: CategoriesContract.Present
                 .withResource(R.raw.smart_tutorials)
                 .build()
 
+//        Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, bovenstaand voor de topic files
+
         val qiChatbot = QiChatbotBuilder.with(qiContext)
-                .withTopics(listOf(commonTopic, talkTopic, moveTopic, smartTopic))
+                .withTopics(listOf(commonTopic, talkTopic, moveTopic, smartTopic
+//                Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, bijbehorende topic file toevoegen
+                ))
                 .build()
                 .also { this.qiChatbot = it }
 
@@ -119,6 +123,7 @@ internal class CategoriesRobot(private val presenter: CategoriesContract.Present
         talkTopicStatus = qiChatbot.topicStatus(talkTopic)
         moveTopicStatus = qiChatbot.topicStatus(moveTopic)
         smartTopicStatus = qiChatbot.topicStatus(smartTopic)
+//        Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, voor beschikbaarheid v/d topic file
 
         levelVariable = qiChatbot.variable("level")
 
@@ -146,6 +151,8 @@ internal class CategoriesRobot(private val presenter: CategoriesContract.Present
                 "advanced" -> {
                     presenter.loadTutorials(TutorialLevel.ADVANCED)
                     selectLevel(TutorialLevel.ADVANCED)
+
+//                    Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, maak een bookmark
                 }
             }
         }

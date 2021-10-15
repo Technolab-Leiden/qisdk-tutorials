@@ -35,6 +35,8 @@ import com.softbankrobotics.qisdktutorials.ui.tutorials.motion.extendmap.MapExte
 import com.softbankrobotics.qisdktutorials.ui.tutorials.perceptions.humanawareness.PeopleCharacteristicsTutorialActivity
 import com.softbankrobotics.qisdktutorials.ui.tutorials.perceptions.takepicture.TakePictureTutorialActivity
 import com.softbankrobotics.qisdktutorials.ui.tutorials.perceptions.touch.TouchTutorialActivity
+//Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format (import fixen)
+
 import com.softbankrobotics.qisdktutorials.utils.Constants
 
 private const val TAG = "CategoriesRouter"
@@ -83,6 +85,7 @@ internal class CategoriesRouter : CategoriesContract.Router {
             TutorialId.DETECT_HUMANS_WITH_LOCALIZATION -> DetectHumansWithLocalizationTutorialActivity::class.java
             TutorialId.CHAT_LOCALE -> ChatLocaleTutorialActivity::class.java
             TutorialId.EXTEND_MAP -> MapExtensionTutorialActivity::class.java
+//            Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, voor koppeling tussen de class file & tutorial id
         }
     }
 }

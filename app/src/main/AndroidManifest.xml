@@ -41,6 +41,7 @@
         <activity android:name=".ui.tutorials.perceptions.detecthumanswithlocalization.DetectHumansWithLocalizationTutorialActivity" />
         <activity android:name=".ui.tutorials.conversation.chatlocale.ChatLocaleTutorialActivity" />
         <activity android:name="com.softbankrobotics.qisdktutorials.ui.tutorials.motion.extendmap.MapExtensionTutorialActivity"/>
+<!--        Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, naam v/d class file-->
     </application>
 
 </manifest>

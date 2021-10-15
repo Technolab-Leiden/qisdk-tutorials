@@ -66,6 +66,7 @@
     <string name="detect_humans_with_localization">Detect humans with localization</string>
     <string name="chat_locale">Mastering Chat locale</string>
     <string name="extend_a_map">Extend a map</string>
+<!--    Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format-->
 
     <!-- Categories -->
     <string name="categories_intro_sentence">Please tell me or select on the tablet which demo you want me to show you</string>
