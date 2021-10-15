@@ -75,12 +75,6 @@
         android:paddingEnd="25dp"
         tools:listitem="@layout/tutorial_layout" />
 
-    <Button
-        android:id="@+id/greetings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Greetings" />
-
     <com.softbankrobotics.qisdktutorials.ui.bilateralswitch.BilateralSwitch
         android:id="@+id/level_switch"
         android:layout_width="wrap_content"

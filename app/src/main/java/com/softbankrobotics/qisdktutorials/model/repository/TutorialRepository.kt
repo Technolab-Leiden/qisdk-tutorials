@@ -45,7 +45,7 @@ class TutorialRepository {
             TutorialLevel.BASIC -> {
 //                TutorialId is gelinkt aan de class file v/d tutorial
 //                R.string is gekoppeld aan de tekst op de button
-//
+//                  Todo: hoe werkt de qiChatbotId?
                 tutorials.add(Tutorial(TutorialId.SAY, R.string.hello_human, "hello", TutorialLevel.BASIC))
                 tutorials.add(Tutorial(TutorialId.QICHATBOT, R.string.qichatbot, "qichatbot", TutorialLevel.BASIC))
                 tutorials.add(Tutorial(TutorialId.LISTEN, R.string.listen, "listen", TutorialLevel.BASIC))

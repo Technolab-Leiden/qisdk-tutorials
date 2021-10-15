@@ -8,10 +8,6 @@ package com.softbankrobotics.qisdktutorials.ui.categories
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.aldebaran.qi.sdk.QiContext
-import com.aldebaran.qi.sdk.`object`.conversation.Phrase
-import com.aldebaran.qi.sdk.`object`.conversation.Say
-import com.aldebaran.qi.sdk.builder.SayBuilder
 
 import com.aldebaran.qi.sdk.design.activity.RobotActivity
 import com.softbankrobotics.qisdktutorials.R
@@ -29,7 +25,6 @@ class CategoriesActivity : RobotActivity(), CategoriesContract.View, OnTutorialC
     private lateinit var presenter: CategoriesContract.Presenter
     private lateinit var robot: CategoriesContract.Robot
     private lateinit var router: CategoriesContract.Router
-    private lateinit var qiContext: QiContext
     private lateinit var tutorialAdapter: TutorialAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,18 +44,6 @@ class CategoriesActivity : RobotActivity(), CategoriesContract.View, OnTutorialC
 
         presenter.loadTutorials(TutorialCategory.TALK)
         this.presenter = presenter
-
-        greetings.setOnClickListener {
-            val phrase: Phrase = Phrase("Hallo, welkom bij de nacht van de leraar. Veel leer plezier.")
-
-// Build the action.
-            val say: Say = SayBuilder.with(qiContext)
-                    .withPhrase(phrase)
-                    .build()
-
-// Run the action synchronously.
-            say.run()
-        }
     }
 
     override fun onResume() {
