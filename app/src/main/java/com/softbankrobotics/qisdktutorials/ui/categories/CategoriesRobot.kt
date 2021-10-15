@@ -88,12 +88,14 @@ internal class CategoriesRobot(private val presenter: CategoriesContract.Present
                 .withText(qiContext.getString(introSentenceRes()))
                 .build()
                 .run()
+//        Todo: gebruik bovenstaande stukje code: binnen de onrobotfocusgained een saybuilder aanroepen voor simpel iets zeggen
 
         isFirstIntro = false
 
         val commonTopic = TopicBuilder.with(qiContext)
                 .withResource(R.raw.common)
                 .build()
+//        Todo: gebruik bovenstaande stukje code: binnen onrobotfocusgained een topic builder voor conversatie a.d.h.v. topoic file
 
         val talkTopic = TopicBuilder.with(qiContext)
                 .withResource(R.raw.talk_tutorials)
