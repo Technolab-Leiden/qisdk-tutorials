@@ -32,6 +32,7 @@ class MapExtensionTutorialActivity : TutorialActivity(), RobotLifecycleCallbacks
     private var qiContext: QiContext? = null
     // The initial ExplorationMap.
     private var initialExplorationMap: ExplorationMap? = null
+//    Todo: vind een plek om bovenstaande explorationMap zo op te slaan dat deze bewaard blijft, ook wanneer de app wordt gesloten.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +43,7 @@ class MapExtensionTutorialActivity : TutorialActivity(), RobotLifecycleCallbacks
             val qiContext = qiContext ?: return@setOnClickListener
             // Start the mapping step.
             startMappingStep(qiContext)
+//            Deze is dus voor een nieuwe map aan maken
         }
 
         extendMapButton.setOnClickListener {
@@ -51,6 +53,7 @@ class MapExtensionTutorialActivity : TutorialActivity(), RobotLifecycleCallbacks
             val qiContext = qiContext ?: return@setOnClickListener
             // Start the map extension step.
             startMapExtensionStep(initialExplorationMap, qiContext)
+//            Deze is voor het uitbreiden v.d map.
         }
 
         // Register the RobotLifecycleCallbacks to this Activity.
@@ -63,6 +66,7 @@ class MapExtensionTutorialActivity : TutorialActivity(), RobotLifecycleCallbacks
         startMappingButton.isEnabled = false
         extendMapButton.isEnabled = false
         initialExplorationMap = null
+//        Todo: deze moet dus niet standaard naar null gezet worden.
         mapImageView.setImageBitmap(null)
     }
 
@@ -91,6 +95,7 @@ class MapExtensionTutorialActivity : TutorialActivity(), RobotLifecycleCallbacks
         // Enable "start mapping" button.
         runOnUiThread {
             startMappingButton.isEnabled = true
+//            Todo: extend mapping button ook enablen.
         }
     }
 

@@ -46,6 +46,8 @@ class QiChatVariablesTutorialActivity : TutorialActivity(), RobotLifecycleCallba
         variable_edit_text.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 retrieveAndAssignVariable()
+//                Todo: wat is de action ID en wanneer is deze gelijk aan IME_ACTION_DONE, dit is gewoon van een android library.
+//                Todo: set on click listener voor input @ui
             }
             false
         }
@@ -114,6 +116,7 @@ class QiChatVariablesTutorialActivity : TutorialActivity(), RobotLifecycleCallba
         variable_edit_text.text.clear()
         KeyboardUtils.hideKeyboard(this@QiChatVariablesTutorialActivity)
         assignVariable(value)
+//        Todo: omzet van input naar string val.
     }
 
     private fun assignVariable(value: String) {
@@ -122,6 +125,7 @@ class QiChatVariablesTutorialActivity : TutorialActivity(), RobotLifecycleCallba
             it.async().setValue(value).andThenConsume {
                 // Read the value.
                 qiChatbot?.async()?.goToBookmark(readBookmark, AutonomousReactionImportance.HIGH, AutonomousReactionValidity.IMMEDIATE)
+//                Todo: gebruiken van de string val in de chatbot
             }
         }
     }
