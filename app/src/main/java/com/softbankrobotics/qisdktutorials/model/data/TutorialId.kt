@@ -32,4 +32,5 @@ enum class TutorialId {
     DETECT_HUMANS_WITH_LOCALIZATION,
     CHAT_LOCALE,
     EXTEND_MAP
+//    Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, naam v/d tutorial
 }

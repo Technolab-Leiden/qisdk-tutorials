@@ -38,10 +38,14 @@ class TutorialRepository {
      * @return The list of tutorials for the talk category and the specified level.
      */
     private fun getTalkTutorials(tutorialLevel: TutorialLevel): List<Tutorial> {
+//        Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format als dit een chat programma is
         val tutorials = mutableListOf<Tutorial>()
 
         when (tutorialLevel) {
             TutorialLevel.BASIC -> {
+//                TutorialId is gelinkt aan de class file v/d tutorial
+//                R.string is gekoppeld aan de tekst op de button
+//
                 tutorials.add(Tutorial(TutorialId.SAY, R.string.hello_human, "hello", TutorialLevel.BASIC))
                 tutorials.add(Tutorial(TutorialId.QICHATBOT, R.string.qichatbot, "qichatbot", TutorialLevel.BASIC))
                 tutorials.add(Tutorial(TutorialId.LISTEN, R.string.listen, "listen", TutorialLevel.BASIC))
@@ -63,6 +67,7 @@ class TutorialRepository {
      * @return The list of tutorials for the move category and the specified level.
      */
     private fun getMoveTutorials(tutorialLevel: TutorialLevel): List<Tutorial> {
+//        Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, als dit een bewegings programma is, zowel rondreiden als animatie
         val tutorials = mutableListOf<Tutorial>()
 
         when (tutorialLevel) {
@@ -87,6 +92,7 @@ class TutorialRepository {
      * @return The list of tutorials for the smart category and the specified level.
      */
     private fun getSmartTutorials(tutorialLevel: TutorialLevel): List<Tutorial> {
+//        Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, voor overige activiteiten.
         val tutorials = ArrayList<Tutorial>()
         when (tutorialLevel) {
             TutorialLevel.BASIC -> {

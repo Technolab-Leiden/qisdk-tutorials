@@ -133,6 +133,7 @@ class CategoriesActivity : RobotActivity(), CategoriesContract.View, OnTutorialC
             presenter.loadTutorials(TutorialCategory.SMART)
             robot.selectTopic(TutorialCategory.SMART)
         }
+//        Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, voor de buttons
 
         close_button.setOnClickListener { finishAffinity() }
     }

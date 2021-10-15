@@ -12,4 +12,5 @@ enum class TutorialCategory {
     TALK,
     MOVE,
     SMART
+//    Todo: wanneer nieuwe tutorial/subprogramma hier in opnemen a.d.h.v. bovenstaande format, naam v/d category
 }
