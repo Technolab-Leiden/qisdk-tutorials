@@ -10,7 +10,10 @@ import android.os.Bundle
 import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.QiSDK
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks
+import com.aldebaran.qi.sdk.builder.ChatBuilder
+import com.aldebaran.qi.sdk.builder.QiChatbotBuilder
 import com.aldebaran.qi.sdk.builder.SayBuilder
+import com.aldebaran.qi.sdk.builder.TopicBuilder
 import com.softbankrobotics.qisdktutorials.R
 import com.softbankrobotics.qisdktutorials.ui.conversation.ConversationBinder
 import com.softbankrobotics.qisdktutorials.ui.tutorials.TutorialActivity
@@ -59,3 +62,25 @@ class HelloHumanTutorialActivity : TutorialActivity(), RobotLifecycleCallbacks {
         // Nothing here.
     }
 }
+
+//        Todo: hier kan dus ook een topic builder in. Neem deze file als template voor nieuwe totirals/subprogramma's i.c.m.:
+//             QiChatbotTutorialActivity is ook een goede template. Kijk vooral in het mapje van tutorials, conversation.
+
+//class 'class file name' : TutorialActivity(), RobotLifecycleCallbacks {
+// override fun onRobotFocusGained(qiContext: QiContext) {
+//val commonTopic = TopicBuilder.with(qiContext)
+//    .withResource(R.raw.common)
+//    .build()
+//
+//val qiChatbot = QiChatbotBuilder.with(qiContext)
+//    .withTopics(listOf(commonTopic, talkTopic, moveTopic, smartTopic))
+//    .build()
+//    .also { this.qiChatbot = it }
+//
+//val chat = ChatBuilder.with(qiContext)
+//    .withChatbot(qiChatbot)
+//    .build()
+//
+//qiChatbot.addOnEndedListener { presenter.goToTutorialForQiChatbotId(it) }
+//this.qiChatbot = qiChatbot
+//chatFuture = chat.async().run()

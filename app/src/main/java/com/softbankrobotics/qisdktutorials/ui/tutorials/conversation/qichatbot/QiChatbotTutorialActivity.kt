@@ -54,6 +54,8 @@ class QiChatbotTutorialActivity : TutorialActivity(), RobotLifecycleCallbacks {
         val conversationStatus = qiContext.conversation.status(qiContext.robotContext)
         conversationBinder = conversation_view.bindConversationTo(conversationStatus)
 
+//        Todo: wat betekend bovenstaande conversationstatus en conversationbinder?
+
         val say = SayBuilder.with(qiContext)
                 .withText("Say \"Hello\" to start the discussion.")
                 .build()
