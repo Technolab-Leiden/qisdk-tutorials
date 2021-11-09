@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--ToDo:
+Maak hierin een template UI met een navbar, back button e.d. in Technolab style
+Hierin zou je ook UI elementen kunnen maken, tenzij je deze liever in een eigen class file wilt maken-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
